@@ -30,9 +30,11 @@ int main(int argc, char *argv[]) {
         if (value == 0) {
              printf("Unknown encoding");
         } else {
-             printf("Received %i\n", mySwitch.getReceivedValue() );
-             //Show pulse(Depends on your RF outlet device. You may need to change the pulse on codesend.cpp)
-	       printf("Received pulse %i\n", mySwitch.getReceivedDelay() );
+             printf("Received %i, protocol %i, pulse %i\n",
+                    mySwitch.getReceivedValue(),
+                    mySwitch.getReceivedProtocol(),
+                    mySwitch.getReceivedDelay()
+                    );
         }
 
         mySwitch.resetAvailable();
